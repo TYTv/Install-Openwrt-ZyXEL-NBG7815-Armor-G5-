@@ -7,6 +7,9 @@
 IPQ807x# printenv serverip
 serverip=192.168.1.99               ---> setting PC ip address 192.168.1.99 and run tftpd64 program
 
+(download link https://downloads.openwrt.org/snapshots/targets/ipq807x/generic/)
+(copy uImage.itb file to tftpd path link)
+
 IPQ807x# tftpboot openwrt-ipq807x-generic-zyxel_nbg7815-initramfs-uImage.itb
 ipq807x_eth_halt: done
 eth0 PHY0 Down Speed :10 Half duplex
@@ -196,6 +199,7 @@ ZYXEL# bootm
 
 
 === flash openwrt sysupgrade.bin ===
+(download link https://github.com/asvio/nbg7815-nss/releases/tag/230929)
 (via winscp copy .bin to system)
 
 root@OpenWrt:~# sysupgrade -n /tmp/openwrt-.zyxel-nbg7815-nss-6.1.-20230929-qualcommax-ipq807x-zyxel_nbg7815-squashfs-sysupgrade.bin
